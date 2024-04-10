@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-indigo-500">
+    <div class="underline decoration-pink-500 font-bold text-2xl py-40 grid justify-items-center flex items-center font-mono">CALCULADORA IMC</div>
+    <form class="grid justify-items-center flex items-center" action="/app.php" method="POST">
+        <div>
+            <label for="nome">Nome:</label>
+            <input class="border-2 border-rose-500" type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label for="data_nascimento">Data Nascimento:</label>
+            <input class="border-2 border-rose-500" type="date" name="data_nascimento" id="data_nascimento">            
+        </div> 
+        <div>
+            <label for="peso">Peso (KG):</label>
+            <input class="border-2 border-rose-500" type="number" name="peso" id="peso" step="0.01">            
+        </div> 
+        <div>
+            <label for="altura">Altura (M):</label>
+            <input class="border-2 border-rose-500" type="number" name="altura" id="altura" step="0.01">            
+        </div>  
+        <div>
+            <label for="">Selecione o sexo:</label>
+            <select class="border-2 border-rose-500" name="sexo" id="sexo">
+                <option disabled>Selecione</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+        </div>  
+        <div>
+            <label for="tipo_calculadora">Tipo de Calculadora:</label>
+            <select class="border-2 border-rose-500" name="tipo_calculadora" id="tipo_calculadora">
+                <option value="Normal">Normal</option>
+                <option value="Masculina">Masculina</option>
+                <option value="Feminina">Feminina</option>
+            </select>
+        </div>  
+        <div>
+            <input class="border-2 border-rose-500 dark:md:hover:bg-fuchsia-600" type="submit" value="Calcular">
+        </div>            
+    </form>
+</body>
+</html>
